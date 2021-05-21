@@ -1,29 +1,91 @@
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+.upper{
+    width: 100%;
+    height: 91px;
+    background-color: #014785;
+}        
+.upper img{
+    background-color: white;
+    border-radius: 10%;
+}
+
+.news::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 50%;
+}
+.right{
+    float: left;
+    width: 10%;
+    height: 1000px;
+    background-color: #014785;
+    margin-right: 5%;
+}
+
+.trending{
+    float: left;
+    margin: 100px auto;
+    height: 350px;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.452);
+    overflow-x: scroll;
+}
+
+.trending .header h1{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #0c4b7085;
+}
+
+.trending .header{
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: #014785;
+    border-radius: 5px 5px 0 0;   
+}
+
+.trending h2{
+    color: white;
+}
+
+.trending img{
+    width: 100%;
+}
+
 body{
     border-radius: 10%;
-    height: 100vh;
-    overflow: hidden;
+    height: 100px;
+    overflow: hidden ;
 }
 .body{
-    position: absolute;
-    margin: auto;
-    border: 3px solid #1310cf;
-    padding: 10px;
-    bottom: 80px;
-    right: 80px;
+    float: left;
+    margin-top: 3%;
+    margin-right: 3%;
     height: 500px;
-    width: 1100px;
-    border-radius: 5px;
-    box-shadow: 0 12px 22px 0 rgba(13, 92, 194, 0.26), 0 6px 20px 0 rgba(13, 92, 194, 0.26);
-    overflow-x: scroll;
+    width: 50%;
     background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.452);
+    overflow-x: scroll;
+    
 }
 .body .header h1{
     font-size:30px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     color: #0c4b7085;
 }
@@ -39,6 +101,8 @@ body{
     background-color: white;
 }
 .body .header{
+    position: -webkit-sticky;
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +115,9 @@ body{
 .body .content{
     width: 100%;
     margin: 10px auto;
+}
+.body .content img{
+    width: 100%;
 }
 .body h4{
     color: #201f1f;
@@ -65,10 +132,10 @@ body{
 p{
     font-size: 16px;
     font-weight: 100;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #201f1f;
 }
 h2{
-    font-family: 'Courier New', Courier, monospace;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 

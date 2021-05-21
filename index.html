@@ -9,17 +9,29 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
-    <div class="bg">
-        <img src="./img/abstract-blue-gradient-linux-wallpaper-preview.jpg" height="650px" width="1500px" alt="">
-    </div>
-    <div class="body">
-        <div class="header">
-            <img src="./img/AC_Logo_Vert.png" height="90px" alt="">
+   <div style="background-image: url('img/photoholgic-TwLFP3C1GUg-unsplash.jpg');" >
+ <div class="news">
+    <div class="upper">
+    <img src="./img/AC_Logo_Vert.png" height="90px" alt="">
+ </div>     
+ <div class="right"></div>
+ <div class="body">
+            <div class="header">
+                <h2>Sports News</h2>
+            </div>
+            <div class="content">
+                
+            </div>
         </div>
-        <div class="content">
-            
+        <div class="trending">
+            <div class="header">
+                <h2>Trending</h2>
+            </div>
+            <div class="content2">
+                
+            </div>
         </div>
-    </div>
+</div>         
     <script class="contentRss">
         $(document).ready(function() {  
             var url = 'https://rss.app/feeds/2jWoz6kTbRz8s154.xml'; //Data in XML format  
@@ -34,6 +46,24 @@
                         var title=data.items[i].title;
                         var content=data.items[i].description;
                         $( ".content" ).append( "<div><div class='boxes'><h4>"+title+"</h4><p>"+content+"</p></div></div>" );
+                    }
+                    
+                }  
+            });  
+        }); 
+        $(document).ready(function() {  
+            var url = 'https://rss.app/feeds/mWeCJr1FyxrYPZO6.xml'; //Data in XML format  
+            $.ajax({  
+                type: 'GET',  
+                url: "https://api.rss2json.com/v1/api.json?rss_url=" + url, //For converting default format to JSON format  
+                dataType: 'jsonp', //for making cross domain call  
+                success: function(data) {  
+                    console.log(data.items[0]);
+                    var total=data.items.length-1;
+                    for(var i=0;i<=total;i++){
+                        var title=data.items[i].title;
+                        var content=data.items[i].description;
+                        $( ".content2" ).append( "<div><div class='boxes'><h4>"+title+"</h4><p>"+content+"</p></div></div>" );
                     }
                     
                 }  
